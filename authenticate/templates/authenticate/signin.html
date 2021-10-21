@@ -1,0 +1,34 @@
+{% extends '../base.html' %}
+
+{% load static %}
+{% block title %} - Sign In {% endblock %}
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center">Signin</h1>
+    
+    <div class="form-group ">
+        <form method="POST" class="">
+            {% csrf_token %}              
+            <label for="username">username</label>
+            <input class="form-control form-control-lg" type="text" name="username"/>
+            <label for="password">password</label>
+            <input class="form-control form-control-lg" type="password" name="password"/>            
+            <label for="firstname">firstname</label>
+            <input class="form-control form-control-lg" type="text" name="firstname"/>
+            <label for="lastname">lastname</label>
+            <input class="form-control form-control-lg" type="text" name="lastname"/>
+            <label for="email">email</label>
+            <input class="form-control form-control-lg" type="email" name="email"/>
+            <label for="city">city</label>
+            <input class="form-control form-control-lg" type="text" name="city"/>
+            <label for="address">address</label>
+            <input class="form-control form-control-lg" type="text" name="address"/>
+            <label for="phone">phone</label>
+            <input class="form-control form-control-lg" type="text" name="phone"/>
+            <br>
+            <button class="w-50" type="submit">SEND</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
